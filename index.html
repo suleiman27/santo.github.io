@@ -1,85 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STORE REQUISITION FORM</title>
+    <title>ASSOCIATED VEHICLE ASSEMBLERS</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-    
-        h5 {
-            margin-bottom: 20px;
-        }
-    
-        label {
-            display: block;
-            margin-bottom: 4px;
-        }
-    
-        input, select, textarea, date {
-            width: calc(100% - 16px);
-            padding: 6px;
-            margin-bottom: 10px;
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
-    
-        button {
-            padding: 8px;
+
+        /* Body and Typography */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4CAF50;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            padding: 12px 20px;
+            margin: 0 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background-color: #45a049;
+            color: white;
+        }
+
+        /* Login Section Styles */
+        #login {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        #login h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #login label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        #login input[type="text"],
+        #login input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            transition: border 0.3s ease;
+        }
+
+        #login input[type="text"]:focus,
+        #login input[type="password"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        #login input[type="submit"] {
             background-color: #4CAF50;
             color: white;
+            padding: 10px;
+            font-size: 18px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-    
-        button:hover {
+
+        #login input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        /* Main Content Section */
+        #main-content {
+            display: none;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-item {
+                margin: 10px 0;
+            }
+
+            #login {
+                max-width: 100%;
+                margin: 20px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
     </style>
-    
 </head>
+
 <body>
 
-    <h5>STORE REQUISITION FORM </h5>
-    <form id="store requisition form">
-        <label for="partNo">Part No:</label>
-        <input type="text" id="partNo" name="partNo" required>
+    <section id="login">
+        <h2>Login</h2>
+        <form id="loginForm" action="your_login_handler.php" method="post">
+            <label for="PFNumber">PF Number:</label>
+            <input type="text" id="PFNumber" name="PFNumber" required>
 
-        <label for="partName">Part Name:</label>
-        <input type="text" id="partName" name="partName" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" required>
+            <input type="submit" value="Login">
+        </form>
+    </section>
 
-        <label for="reason">Reason:</label>
-        <textarea id="reason" name="reason" rows="4" required></textarea>
+    <section id="main-content">
+        <header>
+            <h1>ASSOCIATED VEHICLE ASSEMBLERS</h1>
+        </header>
 
-        <label for="issuedBy">Issued By:</label>
-        <input type="text" id="issuedBy" name="issuedBy" required>
+        <nav>
+            <div class="nav-item"><a href="https://suleiman27.github.io/sulesh.github.io/" target="_blank">PLR</a></div>
+            <div class="nav-item"><a href="https://suleiman27.github.io/suleh.github.io/" target="_blank">ROBBING</a></div>
+            <div class="nav-item"><a href="https://suleiman27.github.io/santo.github.io/" target="_blank">Requisition Path</a></div>
+            <div class="nav-item"><a href="#store requisition">Discrepancy Part</a></div>
+        </nav>
 
-        <label for="approvedBy">Approved By:</label>
-        <input type="text" id="approvedBy" name="approvedBy" required>
+    </section>
 
-        <label for="supervisorSignature">Supervisor Signature:</label>
-        <input type="text" id="supervisorSignature" name="supervisorSignature" required>
-
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
-
-        <button type="submit">Submit</button>
-    </form>
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
 
     <script>
-        document.getElementById("store requisition Form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            // Add your form submission logic here
-            // You can access form values using document.getElementById("elementId").value
-            alert("Form submitted successfully!");
+        // JavaScript to toggle visibility of login form and main content
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission for this example
+
+            // Open a new window for the main content
+            var mainContentWindow = window.open("", "_blank");
+            mainContentWindow.document.write(document.getElementById("main-content").innerHTML);
+
+            // Assuming successful login, close the login window
+            window.close();
         });
     </script>
 
 </body>
+
 </html>
