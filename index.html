@@ -34,6 +34,7 @@
             color: white;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
@@ -74,6 +75,7 @@
             max-width: 400px;
             margin: 50px auto;
             padding: 20px;
+            transition: opacity 0.5s ease-in-out;
         }
 
         #login h2 {
@@ -123,10 +125,44 @@
             display: none;
             margin: 20px auto;
             max-width: 1200px;
-            padding: 20px;
+            padding: 30px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Card Style for Main Content */
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #666;
         }
 
         /* Footer Styles */
@@ -162,6 +198,14 @@
             footer {
                 font-size: 14px;
             }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card h3 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -193,10 +237,20 @@
             <div class="nav-item"><a href="#store requisition">Discrepancy Part</a></div>
         </nav>
 
+        <div class="card">
+            <h3>Welcome to the Main Dashboard</h3>
+            <p>This is where the main content of the site is displayed. Feel free to explore and navigate the different sections.</p>
+        </div>
+
+        <div class="card">
+            <h3>Manage Your Vehicle Assembly Data</h3>
+            <p>Use the navigation above to access different tools and services provided for vehicle assembly management.</p>
+        </div>
+
     </section>
 
     <footer>
-        <p>&copy; 2023 Your Website. All rights reserved.</p>
+        <p>&copy; 2023 Associated Vehicle Assemblers. All rights reserved.</p>
     </footer>
 
     <script>
@@ -207,6 +261,11 @@
             // Open a new window for the main content
             var mainContentWindow = window.open("", "_blank");
             mainContentWindow.document.write(document.getElementById("main-content").innerHTML);
+
+            // Animate main content appearance
+            setTimeout(() => {
+                mainContentWindow.document.body.style.opacity = '1';
+            }, 500);
 
             // Assuming successful login, close the login window
             window.close();
